@@ -65,8 +65,7 @@ voice_assistant:
   volume_multiplier: 2.0
   vad_threshold: 3
   on_wake_word_detected:
-    - auto_gain: 0dBFS
-    - volume_multiplier: 0.1
+    - voice_assistant.stop
     - homeassistant.service:
         service: tts.speak
         data:
@@ -75,8 +74,7 @@ voice_assistant:
         data_template:
           message: "Watt iiss"
     - delay: 3s
-    - auto_gain: 31dBFS
-    - volume_multiplier: 2.0
+    - voice_assistant.start
   on_listening:
     - light.turn_on:
         id: led
