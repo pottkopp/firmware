@@ -71,8 +71,8 @@ voice_assistant:
           entity_id: tts.piper_3
           media_player_entity_id: media_player.mpd
         data_template:
-          message: "Wat is?"
-    - delay: 5s
+          message: "Watt iiss"
+    - delay: 10s
   on_listening:
     - light.turn_on:
         id: led
